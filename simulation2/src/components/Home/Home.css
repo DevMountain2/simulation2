@@ -9,14 +9,17 @@ body {
     margin-right: auto;
     background-color: #fff;
     width: 50%;
+    min-height: 900px;
     height: 100vh;
+    overflow-x: hidden;  
     text-align: center;
 }
 
 .main-content {
-    margin-top: 250px;
+    margin-top: 210px;
     margin-left: auto;
     margin-right: auto;
+    /* height: 100vh; */
     width: 100vw;
 }
 
@@ -40,20 +43,22 @@ input {
 }
 
 button {
-    height: 4vh;
-    width: 7vw;
     font-weight: bold;
     font-size: 14px;
     margin: 0 15px;
 }
 
-
-
 .login-button {
     background-color: #8aea92;
+    /* height: 4vh; */
+    /* width: 7vw; */
+    min-height: 4vh; 
+    min-width: 7vw;
 }
 
 .register-button {
     color: #fff;
     background-color: #3b5249;
+    height: 4vh;
+    width: 7vw;
 }
