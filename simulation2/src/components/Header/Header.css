@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #478D67;
+    color: #fff;
+    height: 8vh;
+    width: 100%;
+   
+}
+
+.header-child {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 22px;
+}
+
+.header-logo {
+    padding-right: 10px;
+}
+
+.houser {
+    font-weight: bold;
+}
+
+.header-left {
+    font-size: 30px;
+}
+
+.header-right {
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 25px;
+    font-weight: bold;
+}
