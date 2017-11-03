@@ -1,54 +1,56 @@
-import React,  { Component } from 'react';
-import {Link} from 'react-router-dom'
-import {connect} from 'react-redux';
-import reducer from '../../reducer/reducer'
-import './dashboard.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import reducer from '../../reducer/reducer';
+import './dashboard.css';
+import Header from '../Header/Header'
 
 class Dashboard extends Component {
-    render(){
-        
-        return(
-            <div className="body">        
+    render() {
+
+        return (
+            <div className="body">
+                <Header />
                 <div className="container">
                     <div className="add-prop">
                         Add new property
                     </div>
                     <div className="list-properties">
                         <div>
-                        List properties with desired rent greather than: $
+                            List properties with desired rent greather than: $
                         </div>
                         <div>
-                            <input type="text"  className="price" placeholder="0"/>
-                        </div> 
-                        <div className="filter-button">
-                            Filter
+                            <input type="text" className="price" placeholder="0" />
                         </div>
-                        <div className="reset">
+                        <button className="filter-button">
+                            Filter
+                        </button>
+                        <button className="reset">
                             Reset
-                        </div>           
+                        </button>
                     </div>
                     <div className="line-cont">
-                        
+
                         <div className="line">
-                        </div> 
-                        
-                    </div>      
+                        </div>
+
+                    </div>
                     <div className="home-listing">
                         Home Listings
                     </div>
                 </div>
-            </div>    
+            </div>
         )
     }
 }
 
-function mapStateToProps( state ) {
+function mapStateToProps(state) {
     return state;
-  }
-  
+}
 
-const actionCreators ={
-    
+
+const actionCreators = {
+
 }
 
 export default connect(mapStateToProps, actionCreators)(Dashboard); 
