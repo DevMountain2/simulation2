@@ -20,7 +20,7 @@ class Dashboard extends Component {
                             List properties with desired rent greather than: $
                         </div>
                         <div>
-                            <input type="text" className="price" placeholder="0" />
+                            <input type="number" className="price" placeholder="0" />
                         </div>
                         <button className="filter-button">
                             Filter
