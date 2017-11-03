@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.png'
 import './Home.css'
 import {Link} from 'react-router-dom'
-import axios from 'react'
+import axios from 'axios'
 
 class LoginForm extends Component {
     constructor(props){
@@ -29,7 +29,13 @@ handlePassword(value){
 
 
 handleLogin(){
-    axios.post("http://localhost:3000/api/login",{username: this.state.username, password: this.state.password}).then((response) => console.log(response)).catch(console.log)
+    axios.post("http://localhost:3000/api/login",{username: this.state.username, password: this.state.password}).then((response) => {
+        if(response){
+            this.props.history.push('/dashboard')
+        } else {
+            this.props.history.push('/')
+        }
+    })
 }
 
 
@@ -42,12 +48,14 @@ handleLogin(){
                         <img src={logo} alt="Houser Logo" />
                         <div className="login-fields-container">
                             <form className="login-fields">
-                                <div class="input-descr">Username</div>
-                                <input type="text" onChange={(e) => this.handleLogin(e.target.value)}></input>
-                                <div class="input-descr" onChange={(e) => this.handlePassword(e.target.value)}>Password</div>
-                                <input type="text"></input>
+                                <div className="input-descr">Username</div>
+                                <input type="text" value ={this.state.username} onChange={(e) => this.handleUsername(e.target.value)}></input>
+                                <div className="input-descr">Password</div>
+                                <input type="text" value={this.state.password} onChange={(e) => this.handlePassword(e.target.value)}></input>
                             </form>
-                            <Link to="/dashboard" ><button type="button" className="login-button" onClick={this.handleLogin}> Login </button></Link>
+                            
+                            <button type="button" className="login-button" onClick={this.handleLogin}> Login </button>
+                            
                             <button type="button" className="register-button"> Register </button>
                         </div>
                     </div>
