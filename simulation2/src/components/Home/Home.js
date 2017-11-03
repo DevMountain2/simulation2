@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.png'
 import './Home.css'
+import {Link} from 'react-router-dom'
 
 class LoginForm extends Component {
     render() {
@@ -16,7 +17,7 @@ class LoginForm extends Component {
                                 <div class="input-descr">Password</div>
                                 <input type="text"></input>
                             </form>
-                            <button type="button" className="login-button"> Login </button>
+                            <Link   to="/dashboard"><button type="button" className="login-button"> Login </button></Link>
                             <button type="button" className="register-button"> Register </button>
                         </div>
                     </div>

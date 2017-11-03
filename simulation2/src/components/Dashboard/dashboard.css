@@ -1,0 +1,85 @@
+.body {
+    background-color: #A6CEB8;
+    
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    width: 75%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.add-prop {
+    background-color: #5BED90;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    width: 30%;
+    font-weight: 700;
+    border-radius: 3px;
+    margin-top: 10px;
+
+}
+
+.price {
+    width: 85px;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+.filter-button {
+    background-color: #5BED90;
+    text-align: center;
+    font-weight: 700;
+    width: 85px;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.reset {
+    background-color: #3B5249;
+    font-weight: 700;
+    width: 85px;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.list-properties {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+
+.line-cont {
+    width: 100%;
+    height: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.line {
+    height: 5px;
+    width: 90%;
+    margin: 0 5%;
+    background-color: grey;
+}
+
+.home-listing {
+    width: 100%;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 5%;
+}

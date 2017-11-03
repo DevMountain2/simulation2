@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import router from './router'
 import './App.css';
+import Dashboard from './components/Dashboard/Dashboard'
 
 //COMPONENTS
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <Home />
+      <div className="App">
+        {router}
       </div>
     );
   }
